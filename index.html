@@ -1,0 +1,41 @@
+---
+layout: default
+title: Libal Zvi Accounting Office
+---
+
+<!-- +++++ Welcome Section +++++ -->
+<div id="ww">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 centered">
+				<img src="assets/img/office.jpg" alt="משרד רואה החשבון ליבל צבי">
+        <h1>ברוכים הבאים למשרד רואה החשבון ליבל צבי</h1>
+        <p>משרד רואה חשבון ליבל צבי הוקם בשנת 1991</p>
+        <p>המשרד עוסק במגוון נושאים כגון הכנת דוחות כספיים ויעוץ מקצועי בתחומי מס הכנסה</p>
+      </div><!-- /col-lg-8 -->
+    </div><!-- /row -->
+
+    <!-- +++++ News Section +++++ -->
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 offset-md-2">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="news list-group">
+              {% for post in site.categories.news %}
+              <li class="news-item list-group-item"><span>{{ post.date |
+                  date_to_string }}</span> » <a href="{{ post.url}}" title="{{ post.title }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- /container -->
+</div><!-- /ww -->
+
+
