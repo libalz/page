@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.png">
 
-    <title>אודות</title>
+    <title>{{ page.title }}</title>
 
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -38,60 +38,26 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            
-            
-            
-  
-
-  
-    
-      <li class="navbar-item"><a href="/software.html">תוכנות מקצועיות</a></li>
-    
-  
-
-  
-    
-      <li class="navbar-item"><a href="/office.html">תחומים</a></li>
-    
-  
-
-  
-    
-      <li class="active navbar-item"><a href="/about.html" class="active">אודות</a></li>
-    
-  
-
-
-
-
+            {% assign pages_list = site.pages | sort: 'id' %}
+            {% assign group = 'navigation' %}
+            {% include pages_list %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div dir="RTL">
-    	<div id="grey">
+
+	<div id="grey">
 	    <div class="container">
 			<div class="row">
-        <div class="col-lg-2">
-					<p><img src="assets/img/user.png" width="130px" height="150px"></p>
+        <div class="col-lg-8 offset-lg-2" markdown="1" dir="RTL">
+
+    {{ content }}
+
         </div>
-				<div class="col-lg-8">
-					<h4>אודות ליבל צבי</h4>
-          <p>blah blah blah</p>
-
-					<h4>אודות משרד רואה החשבון</h4>
-          <p>blah blah blah</p>
-
-					<h4>יצירת קשר</h4>
-          <p>libalz at google.com</p>
-				</div>
-
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /grey -->
-
-    </div>
 
 <!-- +++++ Footer Section +++++ -->
 
@@ -103,10 +69,12 @@
 					<p>נתניה, שמואל הנציב 16</p>
 				</div><!-- /col-lg-4 -->
 
-				<div class="col-lg-6" dir="RTL">
+				<div class="col-lg-6">
 					<h4>קישורים</h4>
 					<p>
-						<a href="https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94">פקודת מס הכנסה</a><br/>
+						<a href="#">Dribbble</a><br/>
+						<a href="#">Twitter</a><br/>
+						<a href="#">Facebook</a>
 					</p>
 				</div><!-- /col-lg-4 -->
 
